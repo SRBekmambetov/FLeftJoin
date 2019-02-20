@@ -37,7 +37,7 @@ public class Main {
         System.out.println();
         System.out.println("Left Join ArrayList: " + new LeftJoin(tableA, tableB).getResultLeftJoinFromArrayList());
         System.out.println();
-        System.out.println("Left Join LinkedList: " + new LeftJoin(tableA, tableB).getResultLeftJoinFromSortedLinkedList());
+        System.out.println("Left Join SortedLinkedList: " + new LeftJoin(tableA, tableB).getResultLeftJoinFromSortedLinkedList());
         System.out.println();
         System.out.println("Left Join HashMap: " + new LeftJoin(tableA, tableB).getResultLeftJoinHashMap());
     }
