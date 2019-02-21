@@ -31,14 +31,15 @@ public class LeftJoin {
     public List<Row> getResultLeftJoinFromArrayList() {
         List<Row> resultTable = new ArrayList<>();
         for (Row rowA: tableA) {
-            if (!tableB.contains(rowA)) {
-                resultTable.add(rowA);
-                continue;
-            }
+            boolean flag = false;
             for (Row rowB: tableB) {
                 if (rowA.equals(rowB)) {
                     resultTable.add(new Row(rowA.getId(), createValuesList(rowA, rowB)));
+                    flag = true;
                 }
+            }
+            if (flag == false) {
+                resultTable.add(rowA);
             }
         }
         return resultTable;
